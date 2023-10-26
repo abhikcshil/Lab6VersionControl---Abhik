@@ -1,17 +1,26 @@
-# This is a sample Python script.
+"""
+Lab 6: Version Control
+Author: Abhik Shil
+Class: COP3502C
+Section: 22282
+Description: Learning version control through git
+"""
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def encode(password):
+    enc_password = ""
+    if len(password) != 8:
+        print("password was not 8 characters long")
+        exit()
+
+    encoded_list = [int(i) + 3 for i in password]
+    for i in encoded_list: enc_password += str(i)
+    print("your encoded password is:", enc_password)
+
+def main():
+
+    password = list(input("Input an 8 digit password containing only integers"))
+    encode(password)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-    vfldskmvdSLKmfwepojmf
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
