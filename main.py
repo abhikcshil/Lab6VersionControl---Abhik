@@ -19,8 +19,12 @@ def encode(password):
 
 def main():
 
-    password = list(input("Input an 8 digit password containing only integers")) #user inputs
-    encode(password) #runs encode function on password
+    user_input = input("Would you like to encode or decode your password? (enter: E/D)")
+    if user_input == "E":
+        password = list(input("Input an 8 digit password containing only integers")) #user inputs
+        encode(password) #runs encode function on password
+    if user_input == "D":
+        pass
 
 
 if __name__ == "__main__":
