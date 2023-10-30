@@ -16,6 +16,15 @@ def encode(password):
     encoded_list = [encoding_dict[int(i)] for i in password] #adds 3 to each integer in password
     for i in encoded_list: enc_password += str(i) #combines all elements in encoded_list
     print("Your encoded password is:", enc_password)
+    
+def decode(user_input):
+    password = ''
+    
+    for i in user_input:
+        temp = str(int(i) - 3) 
+        password += temp
+        #user_input.replace(user_input[i], int(user_input[i]) += 3)
+    print(password)
 
 def main():
 
@@ -24,7 +33,8 @@ def main():
         password = list(input("Input an 8 digit password containing only integers")) #user inputs
         encode(password) #runs encode function on password
     if user_input == "D":
-        pass
+        password = input()
+        decode(password)
 
 
 if __name__ == "__main__":
